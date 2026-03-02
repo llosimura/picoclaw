@@ -180,6 +180,8 @@ func getDefaultAPIBase(protocol string) string {
 		return "https://api.openai.com/v1"
 	case "openrouter":
 		return "https://openrouter.ai/api/v1"
+	case "litellm":
+		return "http://localhost:4000/v1"
 	case "groq":
 		return "https://api.groq.com/openai/v1"
 	case "zhipu":

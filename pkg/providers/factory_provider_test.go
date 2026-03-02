@@ -135,6 +135,12 @@ func TestCreateProviderFromConfig_DefaultAPIBase(t *testing.T) {
 	}
 }
 
+func TestGetDefaultAPIBase_LiteLLM(t *testing.T) {
+	if got := getDefaultAPIBase("litellm"); got != "http://localhost:4000/v1" {
+		t.Fatalf("getDefaultAPIBase(%q) = %q, want %q", "litellm", got, "http://localhost:4000/v1")
+	}
+}
+
 func TestCreateProviderFromConfig_LiteLLM(t *testing.T) {
 	cfg := &config.ModelConfig{
 		ModelName: "test-litellm",
